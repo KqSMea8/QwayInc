@@ -1,0 +1,58 @@
+﻿{
+  "gdc": {
+    "pageType": 14,
+    "bizId": -1,
+    "siteId": 5000076005,
+    "title": "Contacts",
+    "pageId": 5000170026,
+    "lang": "en",
+    "pageName": "default"
+  },
+  "mds": {
+    "assetsVersion": "0.0.9",
+    "componentId": 111,
+    "componentType": 1,
+    "config": {
+      "CACHE_TIME": "900",
+      "IS_MULTI_END": "false",
+      "IS_REAL_TIME": "true",
+      "ONLY_WIRELESS": "false"
+    },
+    "defaultImage": "\/\/img.alicdn.com\/tfs\/TB1zN5XSXXXXXbUXpXXXXXXXXXX-750-376.png",
+    "formData": { },
+    "isEmpty": "false",
+    "isMultiEnd": "false",
+    "moduleData": {
+      "data": {
+        "accountCity": "Qing Dao",
+        "accountDisplayName": "Ms. Elle Yi",
+        "accountIsOverSea": false,
+        "accountMobileNo": "*",
+        "accountAddress": "Cheng Yan District",
+        "encodeAlitalkId": "8pctgRBMALOYHFuwy\/j7aA==",
+        "encryptAccountId": "IDX1uhv5wjr_wxsRhMtk9pBkH3Xlxd-h4xf8xePRyJjKL6XmD3r-vMk5pzwd5oy61XM5",
+        "encryptCompanyId": "IDX1ypI3Br7JYCKNdL-X_pF6xg4feiRFbkVJ76WQghY_mYgmzheDAiHLLej0FlrDszwp",
+        "accountZip": "543002",
+        "accountCountry": "China (Mainland)",
+        "umidToken": "B:c735945e1e47cfde6c5a40577a54df2f",
+        "accountFax": "*",
+        "accountJobTitle": "sales",
+        "esiteSubDomain": "yeel.fm.alibaba.com",
+        "accountProvince": "Shandong",
+        "companyId": "10006262",
+        "accountPhone": "*",
+        "objectDomain": "2"
+      },
+      "definition": {
+        "title": "Company Contact",
+        "gridWidth": 1200
+      },
+      "config": { }
+    },
+    "moduleName": "contactPerson",
+    "moduleTitle": "联系人",
+    "moduleType": "component",
+    "ownerType": 5,
+    "widgetId": "5000296075"
+  }
+}

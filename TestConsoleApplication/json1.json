@@ -1,0 +1,287 @@
+﻿{
+  "gdc": {
+    "pageType": 9,
+    "backgroundThemeColor": "#333333",
+    "bizId": 1804222424,
+    "siteId": 5000099381,
+    "title": "Contacts",
+    "pageId": 5000373810,
+    "lang": "en",
+    "pageName": "default"
+  },
+  "mds": {
+    "assetsPackageName": "icbumod",
+    "assetsVersion": "0.0.1",
+    "componentId": 88,
+    "componentType": 1,
+    "config": {
+      "CACHE_TIME": "1800",
+      "IS_RENDER": "false",
+      "IS_MULTI_END": "true",
+      "IS_REAL_TIME": "true",
+      "ONLY_WIRELESS": "false"
+    },
+    "defaultImage": "\/\/img.alicdn.com\/tfs\/TB1zN5XSXXXXXbUXpXXXXXXXXXX-750-376.png",
+    "formData": {
+      "pcBgImg": "\/\/sc01.alicdn.com\/kf\/HTB1sKjYgeSSBuNjy0Flq6zBpVXaY.jpg",
+      "fontFamily": "Roboto",
+      "color": "#BCC7D0",
+      "isShowDescription": false,
+      "isUseDefaultBg": false,
+      "customNavs": [ ],
+      "hideBottom": true,
+      "fontSize": "32",
+      "isShowBgImage": true,
+      "fontStyle": "blod",
+      "isUseDefaultBgMobile": false,
+      "fontWeight": "blod"
+    },
+    "isEmpty": "false",
+    "isMultiEnd": "true",
+    "moduleData": {
+      "data": {
+        "companyHasPassAssessment": false,
+        "companyMainMarket": {
+          "authenticated": false,
+          "descMarkets": [
+            {
+              "name": "North America",
+              "percentFormat": "40.00%"
+            },
+            {
+              "name": "Central America",
+              "percentFormat": "10.00%"
+            },
+            {
+              "name": "Western Europe",
+              "percentFormat": "10.00%"
+            },
+            {
+              "name": "Southern Europe",
+              "percentFormat": "10.00%"
+            },
+            {
+              "name": "Southeast Asia",
+              "percentFormat": "10.00%"
+            },
+            {
+              "name": "Eastern Europe",
+              "percentFormat": "10.00%"
+            },
+            {
+              "name": "Eastern Asia",
+              "percentFormat": "5.00%"
+            },
+            {
+              "name": "Northern Europe",
+              "percentFormat": "5.00%"
+            }
+          ]
+        },
+        "companyName": "Shenzhen Keysun Technology Limited",
+        "companyLogoFileUrl": "\/\/sc01.alicdn.com\/kf\/HTB1B2d5LXXXXXazXFXX760XFXXXf.png",
+        "companyRegisterFullCountry": "China (Mainland)",
+        "aliMemberEncryptId": "IDX1DB0iT6JCZvzj_ejW63fOaSsqToFugtO_7YG7_14cfC_WTE6eRCOLE8077In1rahO",
+        "accountIsPaidMember": true,
+        "companyHasAssessmentVideo": false,
+        "sesameUnsolvedComplaintNum": 0,
+        "esiteUrls": {
+          "companyVideoUrl": "\/company_profile\/video_introdution.html",
+          "contactsUrl": "\/contactinfo.html",
+          "homeUrl": "\/",
+          "companyProfileUrl": "\/company_profile.html",
+          "companyFeedbackUrl": "\/company_profile\/feedback.html",
+          "trustPassProfileAvUrl": "\/company_profile\/trustpass_profile.html?certification_type=intl_av",
+          "trustPassProfileOnsiteUrl": "\/company_profile\/trustpass_profile.html?certification_type=intl_onsite",
+          "transactionLevelUrl": "\/company_profile\/transaction_level.html",
+          "tradeCapacityUrl": "\/company_profile\/trade_capacity.html",
+          "creditIndexUrl": "\/credit.html",
+          "trustPassProfileAssessmentUrl": "\/company_profile\/trustpass_profile.html?certification_type=intl_assessment",
+          "tradeHistoryUrl": "\/company_profile\/trade_history.html"
+        },
+        "productIsMarketGoods": false,
+        "isShowFeedbackBuyerNum": true,
+        "companyEncryptId": "IDX1vIsua0mqXmid6sTo25fkZkCoR0ASGYNRU4EAa4nYkrAn9pRd00HeOug79g_7NBTB",
+        "menus": [
+          {
+            "name": "index",
+            "title": "Home",
+            "items": [ ],
+            "url": "\/"
+          },
+          {
+            "name": "products",
+            "title": "Product Categories",
+            "items": [
+              {
+                "name": 805545681,
+                "title": "Efficiency Level VI Power Adapter",
+                "items": [ ],
+                "url": "\/productgrouplist-805545681\/Efficiency_Level_VI_Power_Adapter.html"
+              },
+              {
+                "name": 801743631,
+                "title": "UL 1310 Class 2 Power supply",
+                "items": [ ],
+                "url": "\/productgrouplist-801743631\/UL_1310_Class_2_Power_supply.html"
+              },
+              {
+                "name": 805446876,
+                "title": "Christmas Power Supply Unit",
+                "items": [ ],
+                "url": "\/productgrouplist-805446876\/Christmas_Power_Supply_Unit.html"
+              },
+              {
+                "name": 805431610,
+                "title": "Wall Mount Power Adapter",
+                "items": [ ],
+                "url": "\/productgrouplist-805431610\/Wall_Mount_Power_Adapter.html"
+              },
+              {
+                "name": 805544089,
+                "title": "Desktop AC DC Adapter",
+                "items": [ ],
+                "url": "\/productgrouplist-805544089\/Desktop_AC_DC_Adapter.html"
+              },
+              {
+                "name": 803500577,
+                "title": "Laptop Adapter",
+                "items": [ ],
+                "url": "\/productgrouplist-803500577\/Laptop_Adapter.html"
+              },
+              {
+                "name": 801225755,
+                "title": "Interchangeable Power Adapter",
+                "items": [ ],
+                "url": "\/productgrouplist-801225755\/Interchangeable_Power_Adapter.html"
+              },
+              {
+                "name": 221966461,
+                "title": "LED Driver",
+                "items": [ ],
+                "url": "\/productgrouplist-221966461\/LED_Driver.html"
+              },
+              {
+                "name": 806010747,
+                "title": "SMPS Switching Power Supply",
+                "items": [ ],
+                "url": "\/productgrouplist-806010747\/SMPS_Switching_Power_Supply.html"
+              },
+              {
+                "name": 803553979,
+                "title": "Power Banks",
+                "items": [ ],
+                "url": "\/productgrouplist-803553979\/Power_Banks.html"
+              },
+              {
+                "name": "See all categories",
+                "title": "See all categories",
+                "items": [ ],
+                "url": "\/productlist.html"
+              }
+            ],
+            "url": "\/productlist.html"
+          },
+          {
+            "name": "companyProfile",
+            "title": "Company Profile",
+            "items": [
+              {
+                "name": "Company Overview",
+                "title": "Company Overview",
+                "items": [ ],
+                "url": "\/company_profile.html"
+              },
+              {
+                "name": "Industrial Certification",
+                "title": "Industrial Certification",
+                "items": [ ],
+                "url": "\/company_profile\/trustpass_profile.html"
+              },
+              {
+                "name": "Company Capability",
+                "title": "Company Capability",
+                "items": [ ],
+                "url": "\/company_profile\/trade_capacity.html"
+              },
+              {
+                "name": "Business Performance",
+                "title": "Business Performance",
+                "items": [ ],
+                "url": "\/company_profile\/trade_history.html"
+              }
+            ],
+            "url": "\/company_profile.html"
+          },
+          {
+            "name": "contacts",
+            "title": "Contacts",
+            "items": [ ],
+            "url": "\/contactinfo.html"
+          }
+        ],
+        "productIsExhibition": false,
+        "companyRegisterCountry": "CN",
+        "sesameSolvedComplaintNum": 0,
+        "siteType": "esite",
+        "tradeHalfYear": {
+          "compId": 218676155,
+          "channel": "2",
+          "ordAmt": "20,000+",
+          "ordCnt6m": 11
+        },
+        "sesameReplyAvgTimeRange": "<24h",
+        "companyHasPassAV": false,
+        "sesameFirstReplyRate": "94.6%",
+        "companyType": "MANUFACTURER",
+        "supplierRating": 5,
+        "companyHasPassOnsite": true,
+        "xsrfToken": "",
+        "baoAccountAmount": "42,000",
+        "currentMenu": "contacts",
+        "wapSubDomain": "keysuntech.m.en.alibaba.com",
+        "baoAccountIsDisplayAssurance": true,
+        "companyLocation": "Guangdong, China (Mainland)",
+        "companyBusinessType": {
+          "authenticated": false,
+          "value": "Manufacturer"
+        },
+        "tradeIsView": true,
+        "esiteSubDomain": "keysuntech.en.alibaba.com",
+        "companyId": 218676155,
+        "companyJoinYears": "5",
+        "companyHasPassBaseVerify": false,
+        "supplierMarketSuccessfulProductCount": 0,
+        "baoAccountCreditLevel": 4,
+        "companyPromotionTag": [ ],
+        "isShowComplaintsInfo": true,
+        "hasTAOrderYear": true
+      },
+      "hideBottom": true,
+      "definition": {
+        "title": "Shop Sign",
+        "gridWidth": 1200
+      },
+      "config": {
+        "pcBgImg": "\/\/sc01.alicdn.com\/kf\/HTB1sKjYgeSSBuNjy0Flq6zBpVXaY.jpg",
+        "fontFamily": "Roboto",
+        "color": "#BCC7D0",
+        "isShowDescription": false,
+        "isUseDefaultBg": false,
+        "customNavs": [ ],
+        "hideBottom": true,
+        "fontSize": "32",
+        "isShowBgImage": true,
+        "fontStyle": "blod",
+        "isUseDefaultBgMobile": false,
+        "fontWeight": "blod"
+      }
+    },
+    "moduleName": "shopSign",
+    "moduleNameAlias": "icbu-pc-shopSign",
+    "moduleTitle": "店招",
+    "moduleType": "component",
+    "ownerType": 5,
+    "widgetId": "5000817616"
+  }
+}

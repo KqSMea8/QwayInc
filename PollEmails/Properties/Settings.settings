@@ -1,0 +1,17 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PollEmails.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MAPIFolders" Type="System.String" Scope="User">
+      <Value Profile="(Default)">
+                  qway.inc@hotmail.com, feedback@service.alibaba.com ;
+                  qway.ca@hotmail.com, feedback@service.alibaba.com ;
+                  qway.canada@hotmail.com, feedback@service.alibaba.com ;
+                  qway.inc@gmail.com, feedback@service.alibaba.com
+                </Value>
+    </Setting>
+    <Setting Name="MailServers" Type="System.String" Scope="User">
+      <Value Profile="(Default)">aaa</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,87 @@
+﻿{
+  "gdc": {
+    "path": "contacts.htm",
+    "pageType": 90,
+    "backgroundThemeColor": "#20B559",
+    "bizId": 2500333770,
+    "siteId": 5003199071,
+    "title": "Contacts",
+    "pageId": 5005248439,
+    "lang": "en",
+    "pageName": "default"
+  },
+  "mds": {
+    "assetsPackageName": "icbumod",
+    "assetsVersion": "0.0.10",
+    "componentId": 111,
+    "componentType": 1,
+    "config": {
+      "CACHE_TIME": "900",
+      "IS_RENDER": "false",
+      "IS_MULTI_END": "false",
+      "IS_REAL_TIME": "true",
+      "ONLY_WIRELESS": "false"
+    },
+    "defaultImage": "//img.alicdn.com/tfs/TB1zN5XSXXXXXbUXpXXXXXXXXXX-750-376.png",
+    "formData": {},
+    "isEmpty": "false",
+    "isMultiEnd": "false",
+    "moduleData": {
+      "data": {
+        "accountCity": "Shenzhen",
+        "accountDisplayName": "Ms. Grace Wang",
+        "accountIsOverSea": false,
+        "accountMobileNo": "*",
+        "accountAddress": "6f,zhaofeng industry,hangkong RD,xixiang,bao'an",
+        "accountPortraitImage": {
+          "url60x60": "//sc02.alicdn.com/kf/HTB1iBeulHYI8KJjy0Faq6zAiVXak.jpg_80x80.jpg",
+          "urlOriginal": "//sc02.alicdn.com/kf/HTB1iBeulHYI8KJjy0Faq6zAiVXak.jpg",
+          "url200x200": "//sc02.alicdn.com/kf/HTB1iBeulHYI8KJjy0Faq6zAiVXak.jpg_200x200.jpg",
+          "url120x120": "//sc02.alicdn.com/kf/HTB1iBeulHYI8KJjy0Faq6zAiVXak.jpg_120x120.jpg"
+        },
+        "encodeAlitalkId": "8pctgRBMALOe7g2xn1HGHA==",
+        "encryptAccountId": "IDX1x95DibK6CcWEZnIT5Z0i0qi9ChCawkEbvRPBw-N72C2wHLgHnWtbcp0ytEuYpnSR",
+        "encryptCompanyId": "IDX1ASNIn-9q0wjVxZoIbg0WXRXinFn6fqH5L1Qj5X1jL6pPmtehFWLRkr2rbRnrjV8W",
+        "accountZip": "518000",
+        "accountCountry": "China (Mainland)",
+        "umidToken": "B:8df2e0341a04a95080125ebd0b95631b",
+        "baoAccountIsDisplayAssurance": true,
+        "accountJobTitle": "Oversea Trade manager",
+        "esiteSubDomain": "10shidu.en.alibaba.com",
+        "accountProvince": "Guangdong",
+        "companyId": "233393559",
+        "accountPhone": "*",
+        "objectDomain": "2",
+        "accountDepartment": "Other"
+      },
+      "definition": {
+        "title": "Company Contact",
+        "gridWidth": 1200
+      },
+      "config": {},
+      "i18n": {
+        "zip": "Zip:",
+        "address": "Address:",
+        "city": "City:",
+        "countryRegion": "Country/Region:",
+        "telephone": "Telephone:",
+        "provinceState": "Province/State:",
+        "clickToStartOrder": "Click to start order",
+        "contactInformation": "Contact Information",
+        "mobilePhone": "Mobile Phone:",
+        "startOrder": "Start Order",
+        "_ns_": "shopModule.contactPerson",
+        "viewDetails": "View details",
+        "contactSupplier": "Contact Supplier",
+        "fax": "Fax:",
+        "clickToSendAnInquiry": "Click to send an inquiry"
+      }
+    },
+    "moduleName": "contactPerson",
+    "moduleNameAlias": "icbu-pc-contactPerson",
+    "moduleTitle": "联系人",
+    "moduleType": "component",
+    "ownerType": 5,
+    "widgetId": "5019993308"
+  }
+}

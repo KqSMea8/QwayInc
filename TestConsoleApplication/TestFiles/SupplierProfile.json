@@ -1,0 +1,231 @@
+﻿{
+  "data": {
+    "companyHasPassAssessment": true,
+    "companyMainMarket": {
+      "authenticated": true,
+      "descMarkets": [
+        {
+          "name": "North America",
+          "percentFormat": "50.00%",
+          "products": "USB Flash Drive, Power Bank"
+        },
+        {
+          "name": "South America",
+          "percentFormat": "10.00%",
+          "products": "USB Flash Drive, Power Bank"
+        },
+        {
+          "name": "Eastern Europe",
+          "percentFormat": "10.00%",
+          "products": "USB Flash Drive, Power Bank"
+        },
+        {
+          "name": "Western Europe",
+          "percentFormat": "10.00%",
+          "products": "USB Flash Drive, Power Bank"
+        },
+        {
+          "name": "Domestic Market",
+          "percentFormat": "10.00%",
+          "products": "USB Flash Drive, Power Bank"
+        },
+        {
+          "name": "Southeast Asia",
+          "percentFormat": "5.00%",
+          "products": "USB Flash Drive, Power Bank"
+        },
+        {
+          "name": "Mid East",
+          "percentFormat": "5.00%",
+          "products": "USB Flash Drive, Power Bank"
+        }
+      ]
+    },
+    //Andrew
+    "companyName": "Shenzhen Huawanda Electronic Co., Ltd.",
+    "companyLogoFileUrl": "\/\/sc02.alicdn.com\/kf\/HTB1l1F3LXXXXXbIXFXXq6xXFXXXr.jpg",
+    //Andrew
+    "companyRegisterFullCountry": "China (Mainland)",
+    "aliMemberEncryptId": "IDX1U4zHWEvTCvWAlTTcKLIwXwLPGQvd45Zyl_siRtL6LHftJ-e_tnRDAnb9_MYunLgj",
+    "accountIsPaidMember": true,
+    "companyHasAssessmentVideo": true,
+    "sesameUnsolvedComplaintNum": 0,
+    "esiteUrls": {
+      "companyVideoUrl": "\/company_profile\/video_introdution.html",
+      "contactsUrl": "\/contactinfo.html",
+      "homeUrl": "\/",
+      "companyProfileUrl": "\/company_profile.html",
+      "companyFeedbackUrl": "\/company_profile\/feedback.html",
+      "trustPassProfileAvUrl": "\/company_profile\/trustpass_profile.html?certification_type=intl_av",
+      "trustPassProfileOnsiteUrl": "\/company_profile\/trustpass_profile.html?certification_type=intl_onsite",
+      "transactionLevelUrl": "\/company_profile\/transaction_level.html",
+      "tradeCapacityUrl": "\/company_profile\/trade_capacity.html",
+      "creditIndexUrl": "\/credit.html",
+      "trustPassProfileAssessmentUrl": "\/company_profile\/trustpass_profile.html?certification_type=intl_assessment",
+      "tradeHistoryUrl": "\/company_profile\/trade_history.html"
+    },
+    "productIsMarketGoods": false,
+    "accountIsVm": null,
+    "isShowFeedbackBuyerNum": true,
+    "companyEncryptId": "IDX1iSIZjbpHkQK2GUio5YIzl5iwLAqwH5ZHg1vPqo2odPiDAajEPm0y4dQIHvJyYp7l",
+    "productEncryptId": null,
+    "menus": [
+      {
+        "name": "index",
+        "title": "Home",
+        "items": [ ],
+        "url": "\/"
+      },
+      {
+        "name": "products",
+        "title": "Product Categories",
+        "items": [
+          {
+            "name": 806571359,
+            "title": "Encrypted U disk",
+            "items": [ ],
+            "url": "\/productgrouplist-806571359\/Encrypted_U_disk.html"
+          },
+          {
+            "name": 805841633,
+            "title": "Usb Flash Drive",
+            "items": [ ],
+            "url": "\/productgrouplist-805841633\/Usb_Flash_Drive.html"
+          },
+          {
+            "name": 803722024,
+            "title": "Type C series",
+            "items": [ ],
+            "url": "\/productgrouplist-803722024\/Type_C_series.html"
+          },
+          {
+            "name": 218569643,
+            "title": "Power bank",
+            "items": [ ],
+            "url": "\/productgrouplist-218569643\/Power_bank.html"
+          },
+          {
+            "name": 805573765,
+            "title": "Facial Steamer",
+            "items": [ ],
+            "url": "\/productgrouplist-805573765\/Facial_Steamer.html"
+          },
+          {
+            "name": 210086779,
+            "title": "Best Selling Products",
+            "items": [ ],
+            "url": "\/productgrouplist-210086779\/Best_Selling_Products.html"
+          },
+          {
+            "name": "See all categories",
+            "title": "See all categories",
+            "items": [ ],
+            "url": "\/productlist.html"
+          }
+        ],
+        "url": "\/productlist.html"
+      },
+      {
+        "name": "companyProfile",
+        "title": "Company Profile",
+        "items": [
+          {
+            "name": "Company Overview",
+            "title": "Company Overview",
+            "items": [ ],
+            "url": "\/company_profile.html"
+          },
+          {
+            "name": "Industrial Certification",
+            "title": "Industrial Certification",
+            "items": [ ],
+            "url": "\/company_profile\/trustpass_profile.html"
+          },
+          {
+            "name": "Company Capability",
+            "title": "Company Capability",
+            "items": [ ],
+            "url": "\/company_profile\/trade_capacity.html"
+          },
+          {
+            "name": "Business Performance",
+            "title": "Business Performance",
+            "items": [ ],
+            "url": "\/company_profile\/trade_history.html"
+          }
+        ],
+        "url": "\/company_profile.html"
+      },
+      {
+        "name": "contacts",
+        "title": "Contacts",
+        "items": [ ],
+        "url": "\/contactinfo.html"
+      }
+    ],
+    "productIsExhibition": false,
+    //Andrew
+    "companyRegisterCountry": "CN",
+    "sesameSolvedComplaintNum": 0,
+    "siteType": "esite",
+    "tradeHalfYear": {
+      "compId": 200070009,
+      "channel": "2",
+      "ordAmt": "100,000+",
+      "ordAmt6m": null,
+      "ordCnt6m": 29
+    },
+    "sesameReplyAvgTimeRange": "<24h",
+    "companyHasPassAV": false,
+    "sesameFirstReplyRate": "97.3%",
+    //Andrew
+    "companyType": "MANUFACTURER",
+    "supplierRating": 6,
+    "companyHasPassOnsite": true,
+    "xsrfToken": "",
+    "baoAccountAmount": "159,000",
+    "currentMenu": "companyProfile",
+    //Andrew
+    "wapSubDomain": "huawd.m.en.alibaba.com",
+    "baoAccountIsDisplayAssurance": true,
+    //Andrew
+    "companyLocation": "Guangdong, China (Mainland)",
+    //Andrew
+    "companyBusinessType": {
+      "authenticated": false,
+      "value": "Manufacturer"
+    },
+    "tradeIsView": true,
+    "esiteSubDomain": "huawd.en.alibaba.com",
+    //Andrew
+    "companyId": 200070009,
+    "companyJoinYears": "10",
+    "companyHasPassBaseVerify": false,
+    "supplierMarketSuccessfulProductCount": 0,
+    //Andrew
+    "baoAccountCreditLevel": 5,
+    "companyPromotionTag": [ ],
+    "productOwnMemberAlitalkEncryptId": null,
+    "isShowComplaintsInfo": true,
+    "hasTAOrderYear": true
+  },
+  "hideBottom": false,
+  "definition": {
+    "title": "Shop Sign",
+    "gridWidth": 1200
+  },
+  "config": {
+    "pcBgImg": "\/\/sc02.alicdn.com\/kf\/HTB1mEpmobGYBuNjy0Foq6AiBFXa6.jpg",
+    "fontFamily": 0,
+    "color": "#FFFFFF",
+    "isShowDescription": false,
+    "isUseDefaultBg": false,
+    "customNavs": [ ],
+    "hideBottom": false,
+    "fontSize": "32",
+    "isShowBgImage": false,
+    "fontStyle": "blod",
+    "isUseDefaultBgMobile": false,
+    "fontWeight": "blod"
+  }
+}

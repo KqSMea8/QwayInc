@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PollBusinessCards.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DefaultFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Users\andre\Documents\Qway\Alibaba\Pages\BusinessCards\CardReceived</Value>
+    </Setting>
+    <Setting Name="UrlSent" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://profile.alibaba.com/sent_list.htm</Value>
+    </Setting>
+    <Setting Name="UrlReceived" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://profile.alibaba.com/receive_list.htm</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
