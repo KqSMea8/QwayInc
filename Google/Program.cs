@@ -45,13 +45,15 @@ namespace Google
     {
         static void Main(string[] args)
         {
+            //test();
+
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
             Console.WriteLine(String.Format("{0}{1}{0}", new String('=', 5), DateTime.Now));
 
             String connString = System.Configuration.ConfigurationManager.ConnectionStrings["Qway"].ConnectionString;
 #if DEBUG
-            args = new string[] { "SE", "ALL" };
+            args = new string[] { "PE", "ALL" };
 #endif
             Console.WriteLine($"[{DateTime.Now: HH:mm:ss.fff}] Google.exe - Arguments:");
             for (Int32 index = 0; index < args.Length; ++index)
@@ -93,6 +95,24 @@ namespace Google
             Console.WriteLine(String.Format("Elapsed: {0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds / 10));
             Console.WriteLine("THE END");
             //Console.ReadLine();
+        }
+        static void test()
+        {
+            Console.WriteLine("First display of filenames to the console:");
+
+            MemoryStream ms = new MemoryStream();
+            StreamWriter sw = new StreamWriter(ms);
+            Console.SetOut(sw);
+            Console.Out.WriteLine("Display filenames to a file:");
+            Console.Out.WriteLine();
+
+            Console.Out.Close();
+            sw.Close();
+
+            StreamWriter standardOutput = new StreamWriter(Console.OpenStandardOutput());
+            standardOutput.AutoFlush = true;
+            Console.SetOut(standardOutput);
+            Console.WriteLine("Second display of filenames to the console:");
         }
     }
 }

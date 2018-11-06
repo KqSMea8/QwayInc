@@ -167,7 +167,7 @@ namespace Alibaba
 
                                 Utilities.WebDriverExtension.CheckElement(driver, wait, @"//input[@id='respond-in-oneday']", false);
                                 Utilities.WebDriverExtension.CheckElement(driver, wait, @"//input[@id='agree-share-bc']", true);
-                                System.Threading.Thread.Sleep(random.Next(1000, 2000));
+                                //System.Threading.Thread.Sleep(random.Next(1000, 2000));
 
                                 //driver.Navigate().Refresh();
                                 IList<IWebElement> iFramList = driver.FindElementsByTagName("iframe");
@@ -208,7 +208,7 @@ namespace Alibaba
                     }
                 }
                 DataOperation.UpdateSupplierPostStatus(connString, supplier);
-                Utilities.Utilities.Log(message: supplier.HasError ? "X" : ".", isWriteLine: false, addTime: true,isError: supplier.HasError);
+                Utilities.Utilities.Log(message: supplier.HasError ? "X" : ".", isWriteLine: false, addTime: false,isError: supplier.HasError);
                 if (supplier.FatalError)
                 {
                     success = false;

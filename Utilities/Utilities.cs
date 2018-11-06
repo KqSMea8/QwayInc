@@ -53,6 +53,21 @@ namespace Utilities
     public static class Utilities
     {
         #region Public Methods
+        public static StreamWriter CloseConsole()
+        {
+            MemoryStream ms = new MemoryStream();
+            StreamWriter sw = new StreamWriter(ms);
+            Console.SetOut(sw);
+            return sw;
+        }
+        public static void OpenConsole(StreamWriter sw)
+        {
+            Console.Out.Close();
+            sw.Close();
+            StreamWriter standardOutput = new StreamWriter(Console.OpenStandardOutput());
+            standardOutput.AutoFlush = true;
+            Console.SetOut(standardOutput);
+        }
         public static void Log(
             String message,
             Boolean isWriteLine = true,

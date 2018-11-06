@@ -254,7 +254,8 @@ namespace Google
                 foreach (EmailInfo email in emails.Take(total))
                 {
                     success = false;
-                    Utilities.Utilities.Log(message: $"Sending [{count}].[{email.CompanyName}] - [{email.Email}] ... ", isWriteLine: false, addTime: true);
+                    //Utilities.Utilities.Log(message: $"Sending [{count}].[{email.CompanyName}] - [{email.Email}] ... ", isWriteLine: false, addTime: true);
+                    Utilities.Utilities.Log(message: $"Sending [{count + 1}].[{email.Email}] ... ", isWriteLine: false, addTime: true);
                     List<MailAddress> mailList = getMailAddressList(email.Email);
                     if (mailList.Count > 0)
                     {
@@ -279,7 +280,7 @@ namespace Google
                     else
                         email.Comments = "Email list is invalid.";
                     success &= DataOperation.UpdateEmail(connString, email);
-                    Utilities.Utilities.Log(message: success ? $"[Sent]" : "[XXXX]", isWriteLine: true, addTime: false);
+                    Utilities.Utilities.Log(message: success ? $"[Sent]" : "[XXXX]", isWriteLine: true, addTime: false, isError: !success);
                     //if (count > total)
                     //    break;
                 }
@@ -292,6 +293,7 @@ namespace Google
             Boolean success = false;
             MimeMailMessage mailMessage = getMimeMailMessage(emailSetting, email, emailBodyOrg, mailList);
             MimeMailer mailer = getMimeMailer();
+            System.IO.StreamWriter sw = Utilities.Utilities.CloseConsole();
             try
             {
                 mailer.SendMail(mailMessage);
@@ -301,6 +303,7 @@ namespace Google
             {
                 email.Comments = ex.Message;
             }
+            Utilities.Utilities.OpenConsole(sw);
             return success;
         }
 
