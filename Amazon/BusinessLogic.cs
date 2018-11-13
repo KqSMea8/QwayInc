@@ -28,6 +28,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Collections.ObjectModel;
 
 using HtmlAgilityPack;
 //using System.Drawing;
@@ -55,6 +56,106 @@ namespace Amazon
     public static partial class BusinessLogic
     {
         private static WebDriverSettingInfo _WebDriverSetting = new WebDriverSettingInfo(true, true);
+
+        internal static void PollingProduct(String connString, String code)
+        {
+            Boolean success = true;
+            try
+            {
+                _WebDriverSetting = new WebDriverSettingInfo(true, false);
+                Utilities.Utilities.Log(message: "Polling Product Start ... ", isWriteLine: false, addTime: true);
+                List<ProductToSearchInfo> productsToSearch = DataOperation.GetProductToSearch(connString);
+                Utilities.Utilities.Log(message: $"[{productsToSearch.Count}]", isWriteLine: true);
+                ChromeDriver driver = Utilities.WebDriverExtension.GetChromeDriver(hideBrowser: _WebDriverSetting.HideBrowser, hideCommand: _WebDriverSetting.HideCommand);
+                WebDriverWait wait = new WebDriverWait(driver, new TimeSpan(0, 0, 1));
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(1);
+                foreach (ProductToSearchInfo productToSearch in productsToSearch)
+                {
+                    success = false;
+                    Utilities.Utilities.Log(message: $"[{productToSearch.ProductName}] : ", isWriteLine: false, addTime: true);
+                    if (String.IsNullOrEmpty(productToSearch.Url))
+                        productToSearch.Url = getProductUrl(productToSearch);
+                    driver.Navigate().GoToUrl(productToSearch.Url);
+                    String metadata = driver.PageSource;
+                    Int32 totalPages = getPage(driver, "//div[@id='pagn']/span[last()-1]");
+                    Int32 page = getPage(driver, "//div[@id='pagn']/span[count(*)=0]");
+                    do
+                    {
+                        Utilities.Utilities.Log(message: $"[{page}]", isWriteLine: false, addTime: false);
+                        ReadOnlyCollection<IWebElement> elements = null;
+                        if (driver.GetElements("//ul[@id='s-results-list-atf']/li", ref elements))
+                        {
+                            Int32 index = 0;
+                            foreach (IWebElement element in elements)
+                            {
+                                ProductInfo product = new ProductInfo(driver, element, page, ++index, false);
+                                if (!String.IsNullOrEmpty(product.ProductId))
+                                    DataOperation.UpdateProduct(connString, product);
+                                Utilities.Utilities.Log(message: $".", isWriteLine: false, addTime: false);
+                            }
+                        }
+                        else
+                        {
+                        }
+                    } while (page < totalPages && gotoNextPage(driver, ref page));
+                    success = DataOperation.UpdateProductToSearchStatus(connString, productToSearch);
+                    Utilities.Utilities.Log(message: $"[Done]", isWriteLine: true, addTime: false);
+                }
+                driver.Quit();
+            }
+            catch (System.Exception ex)
+            {
+                Utilities.Utilities.Log(message: $"[Error]{ex.Message}", feedLine: true, isWriteLine: true, addTime: true, isError: true);
+            }
+        }
+
+        private static bool gotoNextPage(ChromeDriver driver, ref int page)
+        {
+            Boolean success = false;
+            Int32 count = 0;
+            Int32 newPage = 0;
+            if (gotoNextPage(driver))
+            {
+                newPage = getPage(driver, "//div[@id='pagn']/span[count(*)=0]");
+                while (count++ < 10 && newPage == page && gotoNextPage(driver))
+                    newPage = getPage(driver, "//div[@id='pagn']/span[count(*)=0]");
+                if (newPage != page)
+                {
+                    page = newPage;
+                    success = true;
+                }
+            }
+            return success;
+        }
+        private static bool gotoNextPage(ChromeDriver driver)
+        {
+            Boolean success = false;
+            IWebElement element = null;
+            if (driver.GetElement("//div[@id='pagn']/span[last()]/a", ref element))
+            {
+                element.Click(driver);
+                driver.Navigate().Refresh();
+                success = true;
+            }
+            return success;
+        }
+
+        private static Int32 getPage(ChromeDriver driver, String xPath)
+        {
+            Int32 page = 0;
+            IWebElement element = null;
+            if (driver.GetElement(xPath, ref element))
+            {
+                int.TryParse(element.GetValue(driver: null, attribute: "", defaultValue: ""), out page);
+            }
+            return page;
+        }
+
+        private static string getProductUrl(ProductToSearchInfo product)
+        {
+            throw new NotImplementedException();
+        }
+
         internal static void PollingSellerDetail(string connString)
         {
             Boolean success = true;
@@ -94,6 +195,7 @@ namespace Amazon
                 Utilities.Utilities.Log(message: $"[Error]{ex.Message}", feedLine: true, isWriteLine: true, addTime: true);
             }
         }
+
         internal static void PollingSeller(string connString)
         {
             Boolean success = true;

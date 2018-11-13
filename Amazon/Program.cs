@@ -45,17 +45,13 @@ namespace Amazon
     {
         static void Main(string[] args)
         {
-            //String str = "https://www.amazon.com/s?bbn=384940011&rh=n:3375251,n:!3375301,n:10971181011,n:3410851,n:13280071,n:384940011,p_6:A26LMLYIQSDORB&dc&fst=as:off&qid=1537135705&rnid=331592011&ref=sr_in_-2_p_6_0";
-            ////str = Utilities.StringExtension.GetKeyBetween(str, ":", "&", 14);
-            //MatchCollection matches = Regex.Matches(str, "(:)(?<ii>[a-zA-Z0-9]{13,14})(&)");
-
             Stopwatch stopWatch = new Stopwatch();
             stopWatch.Start();
             Console.WriteLine(String.Format("{0}{1}{0}", new String('=', 5), DateTime.Now));
 
             String connString = System.Configuration.ConfigurationManager.ConnectionStrings["Amazon"].ConnectionString;
 #if DEBUG
-            args = new string[] { "AZSD" };    //S,U
+            args = new string[] { "AZP" };    //S,U
 #endif
             if (args == null || args.Length != 1)
             {
@@ -69,6 +65,9 @@ namespace Amazon
                 String code = args[0];
                 switch (code)
                 {
+                    case "AZP":    //Product
+                        BusinessLogic.PollingProduct(connString, code);
+                        break;
                     case "AZC":
                         BusinessLogic.PollingCategory(connString, code);
                         break;

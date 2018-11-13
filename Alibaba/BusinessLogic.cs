@@ -46,6 +46,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium.Interactions;
+using System.Collections.ObjectModel;
 
 using Utilities;
 using EAGetMail;
@@ -289,7 +290,7 @@ namespace Alibaba
         public static void PollingSupplierCategories(String connString)
         {
             Boolean success = true;
-            _WebDriverSetting = new WebDriverSettingInfo(true, true);
+            _WebDriverSetting = new WebDriverSettingInfo(false, false);
             Console.WriteLine("*****Polling Supplier Categories Start ... ", "");
             try
             {
@@ -628,7 +629,8 @@ namespace Alibaba
             SupplierCategoryInfo supplierCategory = null;
             foreach (IWebElement element in elementsParent)
             {
-                IReadOnlyCollection<IWebElement> elements = element.FindElements(By.XPath(".//ul/li/a"));
+                ReadOnlyCollection<IWebElement> elements = null;
+                element.GetElements(xPath: ".//ul/li/a", elements: ref elements);
                 if (elements == null || elements.Count == 0)
                 {
                     supplierCategory = new SupplierCategoryInfo(driver, wait, element, supplierCategoryParent, false);

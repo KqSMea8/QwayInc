@@ -53,6 +53,26 @@ namespace Amazon
     public class DataOperation
     {
 
+        internal static bool UpdateProductToSearchStatus(string connString, ProductToSearchInfo productToSearch)
+        {
+            DataTable dataTable = SQLExtension.GetDataTableFromStoredProcedure(connString: connString, storedProcedureName: "[qwi].[AZ.UpdateProductToSearchStatus]", parameters: productToSearch.SQLParametersStatus);
+            SQLResultStatusInfo sqlResultStatus = dataTable.SerializeFirst<SQLResultStatusInfo>();
+            return sqlResultStatus.Id > 0;
+        }
+
+        internal static Boolean UpdateProduct(string connString, ProductInfo product)
+        {
+            DataTable dataTable = SQLExtension.GetDataTableFromStoredProcedure(connString: connString, storedProcedureName: "[qwi].[AZ.UpdateProduct]", parameters: product.SQLParameters);
+            SQLResultStatusInfo sqlResultStatus = dataTable.SerializeFirst<SQLResultStatusInfo>();
+            return sqlResultStatus.Id>0;
+        }
+
+        internal static List<ProductToSearchInfo> GetProductToSearch(string connString)
+        {
+            DataTable dataTable = SQLExtension.GetDataTableFromStoredProcedure(connString: connString, storedProcedureName: "[qwi].[AZ.GetProductToSearch]", parameters: null);
+            return dataTable.Serialize<ProductToSearchInfo>();
+        }
+
         internal static List<SellerInfo> GetSeller(string connString)
         {
             DataTable dataTable = SQLExtension.GetDataTableFromStoredProcedure(connString: connString, storedProcedureName: "[qwi].[AZ.GetSeller]", parameters: null);

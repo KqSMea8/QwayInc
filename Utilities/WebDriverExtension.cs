@@ -120,6 +120,16 @@ namespace Utilities
             catch (Exception) { }
             return success;
         }
+        public static Boolean GetElements(this IWebElement elementParent, String xPath, ref ReadOnlyCollection<IWebElement> elements, String key = "", ChromeDriver driver = null, WebDriverWait wait = null)
+        {
+            IWebElement element = null;
+            return elementParent.getElement(false, xPath, ref element, ref elements, key, driver, wait);
+        }
+        public static Boolean GetElement(this IWebElement elementParent, String xPath, ref IWebElement element, String key = "", ChromeDriver driver = null, WebDriverWait wait = null)
+        {
+            ReadOnlyCollection<IWebElement> elements = null;
+            return elementParent.getElement(true, xPath, ref element, ref elements, key, driver, wait);
+        }
         public static Boolean GetElements(this ChromeDriver driver, String xPath, ref ReadOnlyCollection<IWebElement> elements, String key = "", WebDriverWait wait = null)
         {
             IWebElement element = null;
@@ -129,6 +139,39 @@ namespace Utilities
         {
             ReadOnlyCollection<IWebElement> elements = null;
             return driver.getElement(true, xPath, ref element, ref elements, key, wait);
+        }
+        private static Boolean getElement(this IWebElement elementParent, Boolean isSingle, String xPath, ref IWebElement element, ref ReadOnlyCollection<IWebElement> elements, String key, ChromeDriver driver, WebDriverWait wait)
+        {
+            Boolean success = false;
+            try
+            {
+                if (String.IsNullOrEmpty(key) || (driver != null && driver.PageSource.Contains(key)))
+                {
+                    if (wait == null)
+                    {
+                        driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+                        if (isSingle)
+                            element = elementParent.FindElement(By.XPath(xPath));
+                        else
+                            elements = elementParent.FindElements(By.XPath(xPath));
+                        driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
+                    }
+                    else
+                    {
+                        if (isSingle)
+                            element = elementParent.FindElement(By.XPath(xPath));
+                        else
+                            elements = elementParent.FindElements(By.XPath(xPath));
+                    }
+                    success = isSingle ? element != null : elements != null && elements.Count > 0;
+                }
+            }
+            catch (NoSuchElementException) { }
+            catch (Exception ex)
+            {
+                StatusExtension.ErrorMessage = ex.Message;
+            }
+            return success;
         }
         private static Boolean getElement(this ChromeDriver driver, Boolean isSingle, String xPath, ref IWebElement element, ref ReadOnlyCollection<IWebElement> elements, String key, WebDriverWait wait)
         {
@@ -631,45 +674,47 @@ namespace Utilities
                 urlAlibaba = String.IsNullOrEmpty(urlAlibaba) ? "https://login.alibaba.com" : urlAlibaba;
                 WebDriverWait wait = new WebDriverWait(driver, _TimeSpanWaiting);
                 success = driver.GoToUrl(urlAlibaba);
-                IWebElement element;
-                IList<IWebElement> iFramList = driver.FindElementsByTagName("iframe");
-                driver.SwitchTo().Frame(0);
-                element = driver.FindElement(By.XPath("//input[@id='fm-login-id']"));
-                element.SendKeys(email);
-                System.Threading.Thread.Sleep(sleep);
-                element = driver.FindElement(By.XPath("//input[@id='fm-login-password']"));
-                element.SendKeys(password);
-                if (!driver.FindElement(By.XPath("//dd[@id='fm-login-checkcode-wrap']")).Displayed)
-                {
-                    element = driver.FindElement(By.XPath("//input[@id='fm-login-submit']"));
-                    element.Click();
-                    //element.Submit();
-                    success = driver.GetElement("//div[@class='ui-searchbar-main']", ref element, wait: new WebDriverWait(driver, TimeSpan.FromMinutes(1)));  //wait display
-                    if (!driver.GetElement("//div[@id='havana_nco']", ref element))
-                    {
-                        if (driver.GetElement("//div[@id='has-login-field']/form/input", ref element, "has-login-field"))
-                            element.Click();
-                        if (String.IsNullOrEmpty(urlMessage))
-                            success = true;
-                        else
-                        {
-                            success = driver.GoToUrl(urlMessage);
-                            if (driver.PageSource.Contains("ui-feedback ui-feedback-alert"))
-                            {
-                                element = driver.CheckElement("//div[@class='ui-feedback ui-feedback-alert']", 0);
-                                StatusExtension.ErrorMessage = element.Text.DecodeHtml();
-                            }
-                            else
-                                success = true;
-                        }
-                    }
-                    else
-                    {
-                        StatusExtension.ErrorMessage = "Need verification";
-                    }
-                }
-                else
-                    StatusExtension.ErrorMessage = $"Need to check";
+                Console.WriteLine("Login and then enter.");
+                Console.ReadLine();
+                //IWebElement element;
+                //IList<IWebElement> iFramList = driver.FindElementsByTagName("iframe");
+                //driver.SwitchTo().Frame(0);
+                //element = driver.FindElement(By.XPath("//input[@id='fm-login-id']"));
+                //element.SendKeys(email);
+                //System.Threading.Thread.Sleep(sleep);
+                //element = driver.FindElement(By.XPath("//input[@id='fm-login-password']"));
+                //element.SendKeys(password);
+                //if (!driver.FindElement(By.XPath("//dd[@id='fm-login-checkcode-wrap']")).Displayed)
+                //{
+                //    element = driver.FindElement(By.XPath("//input[@id='fm-login-submit']"));
+                //    element.Click();
+                //    //element.Submit();
+                //    success = driver.GetElement("//div[@class='ui-searchbar-main']", ref element, wait: new WebDriverWait(driver, TimeSpan.FromMinutes(1)));  //wait display
+                //    if (!driver.GetElement("//div[@id='havana_nco']", ref element))
+                //    {
+                //        if (driver.GetElement("//div[@id='has-login-field']/form/input", ref element, "has-login-field"))
+                //            element.Click();
+                //        if (String.IsNullOrEmpty(urlMessage))
+                //            success = true;
+                //        else
+                //        {
+                //            success = driver.GoToUrl(urlMessage);
+                //            if (driver.PageSource.Contains("ui-feedback ui-feedback-alert"))
+                //            {
+                //                element = driver.CheckElement("//div[@class='ui-feedback ui-feedback-alert']", 0);
+                //                StatusExtension.ErrorMessage = element.Text.DecodeHtml();
+                //            }
+                //            else
+                //                success = true;
+                //        }
+                //    }
+                //    else
+                //    {
+                //        StatusExtension.ErrorMessage = "Need verification";
+                //    }
+                //}
+                //else
+                //    StatusExtension.ErrorMessage = $"Need to check";
             }
             catch (System.Exception ex)
             {
@@ -678,7 +723,7 @@ namespace Utilities
             return success;
         }
 
-        public static Boolean GoToUrl(this ChromeDriver driver, String url, Int32 fromMinutes=1)
+        public static Boolean GoToUrl(this ChromeDriver driver, String url, Int32 fromMinutes = 1)
         {
             Boolean success = false;
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromMinutes(fromMinutes);
